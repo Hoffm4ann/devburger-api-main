@@ -1,10 +1,16 @@
 module.exports = {
-    dialect: "postgres",
-    url: process.env.DATABASE_URL,
-    define: {
-        timestamps: true,
-        underscored: true,
-        underscoredAll: true,
+    development: {
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+        host: process.env.DB_HOST,
+        dialect: 'postgres',
+        dialectOptions: {
+            ssl: {
+                require: true,
+                rejectUnauthorized: false // Isso pode ser necessário se o certificado não for verificado
+            }
+        }
     },
-
+    ...
 };
