@@ -8,9 +8,8 @@ module.exports = {
         dialectOptions: {
             ssl: {
                 require: true,
-                rejectUnauthorized: false // Isso pode ser necessário se o certificado não for verificado
+                rejectUnauthorized: false
             }
         }
-    },
-    ...
+    }
 };
