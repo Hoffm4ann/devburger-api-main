@@ -7,7 +7,7 @@ import 'dotenv/config';
 
 
 const CorsOptions = {
-    origin: "https://code-burger-front-puii0izn5-diego-alan-hoffmanns-projects.vercel.app",
+    origin: "*",
     credentials: true,
 }
 
