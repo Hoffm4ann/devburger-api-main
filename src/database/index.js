@@ -21,7 +21,7 @@ class Database {
     }
 
     mongo() {
-        this.mongoConnection = mongoose.connect("mongodb://mongo:AvrNlaPgkhQNRKYebUbNBLGCOkrbbYLR@autorack.proxy.rlwy.net:39535", {
+        this.mongoConnection = mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
